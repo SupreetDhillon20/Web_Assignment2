@@ -1,0 +1,19 @@
+{
+  "users": [
+    {
+      "id": "e099",
+      "stuId": "56789",
+      "stuName": "Mike Holmes",
+      "motherName": "Emma Holmes",
+      "fatherName": "Chris Holmes",
+      "phoneNum": "4567347890",
+      "email": "mike2@outlook.com",
+      "gender": "male",
+      "dob": "2004-06-11",
+      "address": "862 Hollywood Road S",
+      "city": "Kelowna",
+      "province": "BC",
+      "zipCode": "V6X 6Y1"
+    }
+  ]
+}
