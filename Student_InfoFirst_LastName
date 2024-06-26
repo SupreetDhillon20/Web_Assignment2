@@ -1,0 +1,32 @@
+[
+  {
+    "firstName": "Tyler",
+    "lastName": "Breeze",
+    "dob": "2008-04-23",
+    "grade": "10"
+  },
+  {
+    "firstName": "Kyler",
+    "lastName": "Smith",
+    "dob": "2009-08-15",
+    "grade": "9"
+  },
+  {
+    "firstName": "Emily",
+    "lastName": "Watson",
+    "dob": "2007-11-12",
+    "grade": "10"
+  },
+  {
+    "firstName": "Chris",
+    "lastName": "Brown",
+    "dob": "2006-07-22",
+    "grade": "11"
+  },
+  {
+    "firstName": "Sarah",
+    "lastName": "Davis",
+    "dob": "2009-01-10",
+    "grade": "9"
+  }
+]
