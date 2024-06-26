@@ -4,7 +4,7 @@ const StudentList = () => {
   const [students, setStudents] = useState([]);
 
   useEffect(() => {
-    fetch('/students.json')
+    fetch('http://localhost:5000/users')
       .then((response) => response.json())
       .then((data) => setStudents(data))
       .catch((error) => console.error('Error fetching students:', error));
@@ -16,7 +16,7 @@ const StudentList = () => {
       <ul className="list-disc pl-5">
         {students.map((student) => (
           <li key={student.id} className="mb-2">
-            {student.firstName} {student.lastName} - Grade: {student.grade}
+            {student.stuName}
           </li>
         ))}
       </ul>
