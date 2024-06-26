@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 const Navbar = () => {
     return (
@@ -8,9 +9,15 @@ const Navbar = () => {
                     My Application
                 </div>
                 <div className="space-x-4">
-                    <a href="/" className="text-white hover:text-gray-200">Home</a>
-                    <a href="/about" className="text-white hover:text-gray-200">About</a>
-                    <a href="/contact" className="text-white hover:text-gray-200">Contact</a>
+                    <Link href="/">
+                        <a className="text-white hover:text-gray-200">Home</a>
+                    </Link>
+                    <Link href="/form">
+                        <a className="text-white hover:text-gray-200">Form</a>
+                    </Link>
+                    <Link href="/students">
+                        <a className="text-white hover:text-gray-200">Students</a>
+                    </Link>
                 </div>
             </div>
         </nav>
