@@ -6,11 +6,11 @@ import Navbar from './components/Navbar';
 import Form from './components/Form';
 import Footer from './components/Footer';
 
-const Page = () => {
+const FormPage = () => {
     return (
         <div>
             <Navbar />
-            <div className="container mx-auto">
+            <div className="container mx-auto mt-10">
                 <Form />
             </div>
             <Footer />
@@ -18,12 +18,31 @@ const Page = () => {
     );
 };
 
-export default Page;
-export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center mx-10">
-      <StudentList />
-      <Form/>
-    </main>
-  );
-}
+const StudentsPage = () => {
+    return (
+        <div>
+            <Navbar />
+            <div className="container mx-auto mt-10">
+                <StudentList />
+            </div>
+            <Footer />
+        </div>
+    );
+};
+
+export default StudentsPage;
+
+const Home = () => {
+    return (
+        <div>
+            <Navbar />
+            <div className="container mx-auto mt-10 text-center">
+                <h1 className="text-4xl">Welcome to My Application</h1>
+                <p className="mt-4 text-lg">Use the navigation to go to the Form or Students page.</p>
+            </div>
+            <Footer />
+        </div>
+    );
+};
+
+export default Home;
