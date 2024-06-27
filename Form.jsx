@@ -2,6 +2,7 @@
 import React, {useState} from 'react'
 
 const Form = () => {
+    // State to manage form data
     const [formData, setFormData] =useState({
         stuId: "",
         stuName: "",
@@ -17,8 +18,10 @@ const Form = () => {
         zipCode: ""
     })
 
-//console.log(e.target.value)
+    // State to manage success or error message
     const [message, setMessage] = useState('')
+
+    // Function to handle input changes
     const handleInputChange = (e) => {
         console.log(e);
         const {name, value}=e.target
@@ -29,9 +32,11 @@ const Form = () => {
         })
     };
 
+    // Function to handle form submission
     const handleSubmit = async(e)=>{
         e.preventDefault();
         try {
+            // Sending form data to server
             const response = await fetch('http://localhost:5000/users',{
                 method:'POST',
                 headers:{
@@ -39,8 +44,10 @@ const Form = () => {
                 },
                 body:JSON.stringify(formData)
             })
+            // Is response successful?
             if (response.ok) {
                 setMessage('Student Added Successfully!')
+                // Resetting form data after submission
                 setFormData({
                     stuId: "",
                     stuName: "",
@@ -64,7 +71,7 @@ const Form = () => {
     }
 
   return ( 
-    <div className='w-2/4 mt-10 bg-white p-6 rounded-lg shadow-md'>
+    <div className='w-2/4 mt-10 bg-neutral-50 p-6 rounded-lg shadow-md'>
         <h2 className='text-2xl mb-11 mt-4 text-center'>Student Registration Form</h2>
         <form onSubmit={handleSubmit}>
             {/* Add handle Submit*/}
@@ -72,7 +79,6 @@ const Form = () => {
                 <label htmlFor='stuId' className='Block text-md font-medium text-gray-600'>
                     Student ID 
                 </label>
-                {/* Add Value, onChange*/}
                 <input 
                 type='number' 
                 id='stuId' 
@@ -88,7 +94,6 @@ const Form = () => {
                 <label htmlFor='stuName' className='Block text-md font-medium text-gray-600'>
                     Student Name 
                 </label>
-                {/* Add Value, onChange*/}
                 <input 
                 type='text' 
                 id='stuName' 
@@ -101,7 +106,6 @@ const Form = () => {
                 <label htmlFor='motherName' className='Block text-md font-medium text-gray-600'>
                     Mother Name 
                 </label>
-                {/* Add Value, onChange*/}
                 <input 
                 type='text' 
                 id='motherName' 
@@ -114,7 +118,6 @@ const Form = () => {
                 <label htmlFor='fatherName' className='Block text-md font-medium text-gray-600'>
                     Father Name
                 </label>
-                {/* Add Value, onChange*/}
                 <input 
                 type='text' 
                 id='fatherName'
@@ -128,7 +131,6 @@ const Form = () => {
                 <label htmlFor='phoneNum' className='Block text-md font-medium text-gray-600'>
                     Phone Number 
                 </label>
-                {/* Add Value, onChange*/}
                 <input 
                 type='tel' 
                 id='phoneNum'
@@ -144,7 +146,6 @@ const Form = () => {
                 <label htmlFor='email' className='Block text-md font-medium text-gray-600'>
                     Email 
                 </label>
-                {/* Add Value, onChange*/}
                 <input 
                 type='email' 
                 id='email'
@@ -161,7 +162,6 @@ const Form = () => {
                 <label htmlFor='gender' className='Block text-md font-medium text-gray-600'>
                     Gender
                 </label>
-                {/* Add Value, onChange*/}
                 <select id="gender" name="gender" onChange={handleInputChange} className='mt-1 p-2 block w-full border border-gray-300 rounded-md' required>
                     <option value="">Select Gender</option>
                     <option value="male">Male</option>
@@ -174,7 +174,6 @@ const Form = () => {
                 <label htmlFor='dob' className='Block text-md font-medium text-gray-600'>
                     DOB 
                 </label>
-                {/* Add Value, onChange*/}
                 <input 
                 type='date' 
                 id='dob'
@@ -188,7 +187,6 @@ const Form = () => {
                 <label htmlFor='address' className='Block text-md font-medium text-gray-600'>
                     Address 
                 </label>
-                {/* Add Value, onChange*/}
                 <input 
                 type='text' 
                 id='address'
@@ -202,7 +200,6 @@ const Form = () => {
                 <label htmlFor='city' className='Block text-md font-medium text-gray-600'>
                     City 
                 </label>
-                {/* Add Value, onChange*/}
                 <input 
                 type='text' 
                 id='city'
@@ -216,7 +213,6 @@ const Form = () => {
                 <label htmlFor='province' className='Block text-md font-medium text-gray-600'>
                     Province 
                 </label>
-                {/* Add Value, onChange*/}
                 <input 
                 type='text' 
                 id='province'
@@ -230,7 +226,6 @@ const Form = () => {
                 <label htmlFor='zipCode' className='Block text-md font-medium text-gray-600'>
                     Zip Code 
                 </label>
-                {/* Add Value, onChange*/}
                 <input 
                 type='text' 
                 id='zipCode'
