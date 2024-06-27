@@ -183,6 +183,30 @@ const Form = () => {
                 onChange={handleInputChange} 
                 required/>
             </div>
+
+            <div className='mb-6'>
+                <label htmlFor='grade' className='Block text-md font-medium text-gray-600'>
+                    Grade 
+                </label>
+                <select id="grade" name="grade" onChange={handleInputChange} className='mt-1 p-2 block w-full border border-gray-300 rounded-md' required>
+                    <option value="">Select Grade</option>
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="A">A</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="B">B</option>
+                    <option value="C+">C+</option>
+                    <option value="C-">C-</option>
+                    <option value="C">C</option>
+                    <option value="D+">D+</option>
+                    <option value="D-">D-</option>
+                    <option value="D">D</option>
+                    <option value="E">E</option>
+                    <option value="F">F</option>
+                </select>
+            </div>
+            
             <div className='mb-6'>
                 <label htmlFor='address' className='Block text-md font-medium text-gray-600'>
                     Address 
