@@ -1,48 +1,21 @@
-'use client'
-import Form from "./components/form";
-import StudentList from '../components/StudentList';
-import React from 'react';
-import Navbar from './components/Navbar';
-import Form from './components/Form';
-import Footer from './components/Footer';
+import React from "react";
+import StudentInfo from "./components/StudentInfo";
 
-const FormPage = () => {
-    return (
-        <div>
-            <Navbar />
-            <div className="container mx-auto mt-10">
-                <Form />
-            </div>
-            <Footer />
+export default function Home() {
+  return (
+    <main className="flex min-h-screen flex-col items-center mx-10">
+      <div className="bg-gray-100 rounded-md">
+      <div className="container mx-auto py-8">
+        <div className="text-center mb-8">
+          <h1 className="text-4xl font-bold text-gray-800 mb-4">Welcome to Williamson High School</h1>
+          <p className="text-lg text-gray-600">
+            At Williamson High School, we are committed to nurturing the next generation of leaders, thinkers, and innovators.
+          </p>
         </div>
-    );
-};
 
-const StudentsPage = () => {
-    return (
-        <div>
-            <Navbar />
-            <div className="container mx-auto mt-10">
-                <StudentList />
-            </div>
-            <Footer />
-        </div>
-    );
-};
-
-export default StudentsPage;
-
-const Home = () => {
-    return (
-        <div>
-            <Navbar />
-            <div className="container mx-auto mt-10 text-center">
-                <h1 className="text-4xl">Welcome to My Application</h1>
-                <p className="mt-4 text-lg">Use the navigation to go to the Form or Students page.</p>
-            </div>
-            <Footer />
-        </div>
-    );
-};
-
-export default Home;
+      </div>
+    </div>
+      <StudentInfo/>
+    </main>
+  );
+}
